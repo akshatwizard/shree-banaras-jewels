@@ -36,14 +36,14 @@ export default function FifthComponent() {
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-m-01.jpeg"
+                                src="/media/fifth-component/pro-m-01.jpeg"
                                 className="post-image"
                                 alt=""
                               />
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-01.jpeg"
+                                src="/media/fifth-component/pro-01.jpeg"
                                 className="hover-image back"
                                 alt=""
                               />
@@ -113,14 +113,14 @@ export default function FifthComponent() {
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-m-02.jpeg"
+                                src="/media/fifth-component/pro-m-02.jpeg"
                                 className="post-image"
                                 alt=""
                               />
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-02.jpeg"
+                                src="/media/fifth-component/pro-02.jpeg"
                                 className="hover-image back"
                                 alt=""
                               />
@@ -167,9 +167,7 @@ export default function FifthComponent() {
                               <span className="count">(1 review)</span>
                             </div>
                             <h3 className="product-title">
-                              <a href="shop-details.html">
-                              Dangle Earrings
-                              </a>
+                              <a href="shop-details.html">Dangle Earrings</a>
                             </h3>
                             <span className="price">
                               <del aria-hidden="true">
@@ -197,14 +195,14 @@ export default function FifthComponent() {
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-m-03.jpeg"
+                                src="/media/fifth-component/pro-m-03.jpeg"
                                 className="post-image"
                                 alt=""
                               />
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-03.jpeg"
+                                src="/media/fifth-component/pro-03.jpeg"
                                 className="hover-image back"
                                 alt=""
                               />
@@ -272,14 +270,14 @@ export default function FifthComponent() {
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-m-04.jpeg"
+                                src="/media/fifth-component/pro-m-04.jpeg"
                                 className="post-image"
                                 alt=""
                               />
                               <img
                                 width="600"
                                 height="600"
-                                src="media/fifth-component/pro-04.jpeg"
+                                src="/media/fifth-component/pro-04.jpeg"
                                 className="hover-image back"
                                 alt=""
                               />
@@ -326,9 +324,7 @@ export default function FifthComponent() {
                               <span className="count">(2 reviews)</span>
                             </div>
                             <h3 className="product-title">
-                              <a href="shop-details.html">
-                              Pendent Set
-                              </a>
+                              <a href="shop-details.html">Pendent Set</a>
                             </h3>
                             <span className="price">
                               <del aria-hidden="true">
@@ -343,7 +339,88 @@ export default function FifthComponent() {
                       </div>
                     </div>
                   </div>
-
+                  
+                  <div className="item-product slick-slide">
+                    <div className="items">
+                      <div className="products-entry clearfix product-wapper">
+                        <div className="products-thumb">
+                          <div className="product-lable">
+                            <div className="onsale">-33%</div>
+                          </div>
+                          <div className="product-thumb-hover">
+                            <a href="#">
+                              <img
+                                width="600"
+                                height="600"
+                                src="/media/fifth-component/pro-m-04.jpeg"
+                                className="post-image"
+                                alt=""
+                              />
+                              <img
+                                width="600"
+                                height="600"
+                                src="/media/fifth-component/pro-04.jpeg"
+                                className="hover-image back"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div className="product-button">
+                            <div
+                              className="btn-add-to-cart"
+                              data-title="Add to cart"
+                            >
+                              <a
+                                rel="nofollow"
+                                href="#"
+                                className="product-btn button"
+                              >
+                                Add to cart
+                              </a>
+                            </div>
+                            <div className="btn-wishlist" data-title="Wishlist">
+                              <button className="product-btn">
+                                Add to wishlist
+                              </button>
+                            </div>
+                            {/* <div className="btn-compare" data-title="Compare">
+                              <button className="product-btn">Compare</button>
+                            </div> */}
+                            <span
+                              className="product-quickview"
+                              data-title="Quick View"
+                            >
+                              <a
+                                href="#"
+                                className="quickview quickview-button"
+                              >
+                                Quick View <i className="icon-search"></i>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                        <div className="products-content">
+                          <div className="contents">
+                            <div className="rating">
+                              <div className="star star-4"></div>
+                              <span className="count">(2 reviews)</span>
+                            </div>
+                            <h3 className="product-title">
+                              <a href="shop-details.html">Pendent Set</a>
+                            </h3>
+                            <span className="price">
+                              <del aria-hidden="true">
+                                <span>$150.00</span>
+                              </del>
+                              <ins>
+                                <span>$100.00</span>
+                              </ins>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

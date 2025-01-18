@@ -26,19 +26,19 @@ export default function TopCategories() {
                 >
                   <div className="item item-product-cat slick-slide">
                     <div className="item-product-cat-content">
-                      <a href="#">
+                      <a href="/coming-soon">
                         <div className="item-image animation-horizontal">
                           <img
                             width="258"
                             height="258"
-                            src="media/top-categories/cat-01.jpg"
+                            src="/media/top-categories/cat-01.jpg"
                             alt="Bracelets"
                           />
                         </div>
                       </a>
                       <div className="product-cat-content-info">
                         <h2 className="item-title">
-                          <a href="#">Necklaces</a>
+                          <a href="/coming-soon">Necklaces</a>
                         </h2>
                       </div>
                     </div>
@@ -46,19 +46,19 @@ export default function TopCategories() {
 
                   <div className="item item-product-cat slick-slide">
                     <div className="item-product-cat-content">
-                      <a href="#">
+                      <a href="/coming-soon">
                         <div className="item-image animation-horizontal">
                           <img
                             width="258"
                             height="258"
-                            src="media/top-categories/cat-02.jpeg"
+                            src="/media/top-categories/cat-02.jpeg"
                             alt="Earrings"
                           />
                         </div>
                       </a>
                       <div className="product-cat-content-info">
                         <h2 className="item-title">
-                          <a href="#">Earrings</a>
+                          <a href="/coming-soon">Earrings</a>
                         </h2>
                       </div>
                     </div>
@@ -66,19 +66,19 @@ export default function TopCategories() {
                   
                   <div className="item item-product-cat slick-slide">
                     <div className="item-product-cat-content">
-                      <a href="#">
+                      <a href="/coming-soon">
                         <div className="item-image animation-horizontal">
                           <img
                             width="258"
                             height="258"
-                            src="media/top-categories/cat-03.jpeg"
+                            src="/media/top-categories/cat-03.jpeg"
                             alt="Earrings"
                           />
                         </div>
                       </a>
                       <div className="product-cat-content-info">
                         <h2 className="item-title">
-                          <a href="#">Diamond Ring</a>
+                          <a href="/coming-soon">Diamond Ring</a>
                         </h2>
                       </div>
                     </div>
@@ -86,19 +86,19 @@ export default function TopCategories() {
 
                   <div className="item item-product-cat slick-slide">
                     <div className="item-product-cat-content">
-                      <a href="#">
+                      <a href="/coming-soon">
                         <div className="item-image animation-horizontal">
                           <img
                             width="258"
                             height="258"
-                            src="media/top-categories/cat-04.jpg"
+                            src="/media/top-categories/cat-04.jpg"
                             alt="Pendants"
                           />
                         </div>
                       </a>
                       <div className="product-cat-content-info">
                         <h2 className="item-title">
-                          <a href="#">Pendants</a>
+                          <a href="/coming-soon">Pendants</a>
                         </h2>
                       </div>
                     </div>
@@ -106,19 +106,19 @@ export default function TopCategories() {
 
                   <div className="item item-product-cat slick-slide">
                     <div className="item-product-cat-content">
-                      <a href="#">
+                      <a href="/coming-soon">
                         <div className="item-image animation-horizontal">
                           <img
                             width="258"
                             height="258"
-                            src="media/top-categories/cat-05.jpg"
+                            src="/media/top-categories/cat-05.jpg"
                             alt="Gold Rings"
                           />
                         </div>
                       </a>
                       <div className="product-cat-content-info">
                         <h2 className="item-title">
-                          <a href="#">Gold Rings</a>
+                          <a href="/coming-soon">Gold Rings</a>
                         </h2>
                       </div>
                     </div>

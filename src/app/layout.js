@@ -4,7 +4,7 @@ const Footer = dynamic(() => import("@/components/Footer/Footer"), {
 const Header = dynamic(() => import("@/components/Header/Header"), {
   loading: () => <Loader />,
 });
-import Loader from "@/components/Loader";
+
 const QuickView = dynamic(() => import("@/components/QuickView/QuickView"), {
   loading: () => <Loader />,
 });
@@ -14,6 +14,7 @@ const WishlistPopUp = dynamic(
     loading: () => <Loader />,
   }
 );
+import Loader from "@/components/Loader/Loader";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="media/fav.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/media/fav.png" type="image/x-icon" />
         <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/libs/feather-font/css/iconfont.css" />
         <link rel="stylesheet" href="/libs/icomoon-font/css/icomoon.css" />
@@ -46,9 +47,17 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+        />
       </head>
       <body className="home">
-        <div id="page" className="hfeed page-wrapper" style={{overflow:"hidden"}}>
+        <div
+          id="page"
+          className="hfeed page-wrapper"
+          style={{ overflow: "hidden" }}
+        >
           <Header />
 
           <div id="site-main" className="site-main">
@@ -96,6 +105,23 @@ export default function RootLayout({ children }) {
         />
         <Script
           src="/libs/mmenu/js/jquery.mmenu.all.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script src="/libs/slider/js/tmpl.js" strategy="beforeInteractive" />
+        <Script
+          src="/libs/slider/js/jquery.dependClass-0.1.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/libs/slider/js/draggable-0.1.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/libs/slider/js/jquery.slider.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="/libs/elevatezoom/js/jquery.elevatezoom.js"
           strategy="beforeInteractive"
         />
         <Script src="/assets/js/app.js" strategy="lazyOnload" />
