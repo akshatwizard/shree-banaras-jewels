@@ -36053,3 +36053,7 @@ body[class~="home"][class~="title-6"]
 .slick-prev:hover, .slick-next:hover {
   color: #fff; /* Change arrow color on hover */
 }
+
+.product-title a{ 
+  display: inline-block;
+}
