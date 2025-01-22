@@ -2,6 +2,7 @@
 import useFetch from "@/hooks/FetchData";
 import React, { useState, useEffect } from "react";
 import Skeleton from "../../../components/Skeleton/Skeleton";
+import OverlayLoader from "@/components/Skeleton/OverlayLoader";
 
 export default function Products({ productId }) {
     const [showFilterMenu, setShowFilterMenu] = useState(false);
@@ -139,7 +140,6 @@ export default function Products({ productId }) {
     return (
         <section className="section-padding" style={{ margin: "50px 0" }}>
             <div className="section-container p-l-r">
-
                 <div className="row">
                     <div className="col-12">
                         <div className="products-topbar clearfix">
@@ -181,7 +181,10 @@ export default function Products({ productId }) {
                         </div>
                     </div>
                     {
-                        loading || newloading ? <Skeleton /> :
+                        loading || newloading ? <>
+                            <OverlayLoader />
+                            <Skeleton />
+                        </> :
                             <>
                                 {productData?.map((product) => (
                                     <div key={product.title} className="col-lg-3 col-md-4 col-12 col-sm-6" style={{ marginBottom: "30px" }}>

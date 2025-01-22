@@ -35775,6 +35775,8 @@ body[class~="home"][class~="title-6"]
   color: white;
   border-radius: 8px;
   transition: transform 0.2s linear;
+  z-index: 99999;
+  position: relative;
 
   &:active {
     transform: scale(0.8);
