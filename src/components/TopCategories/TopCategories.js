@@ -21,6 +21,7 @@ export default function TopCategories() {
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
+    slidesToShow: 5,
     arrows: false, // Ensure arrows are enabled
     swipeToSlide: true,
     responsive: [
