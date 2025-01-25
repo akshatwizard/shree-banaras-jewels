@@ -58,6 +58,17 @@ export default function page({ productId }) {
                                 </div>
 
                                 <div className="product-info col-lg-6 col-md-12 col-12">
+                                    <span style={{ fontSize: "1.2rem", color:"#323232" }} >
+                                        SBJ &nbsp;
+                                        {productData?.attributes?.map((attr) => (
+                                            attr?.attribute?.title === "Primary Material" && (
+                                                `${attr?.values?.map((val)=>(
+                                                    `${val?.attribute_value?.name}`
+                                                ))}`
+                                            )
+                                        ))}
+                                        &nbsp; {productData?.category?.title}
+                                    </span>
                                     <h1 className="title">{productData?.title}</h1>
                                     <span className="price">
                                         <del aria-hidden="true">
@@ -73,14 +84,14 @@ export default function page({ productId }) {
                                             (3<span> reviews</span>)
                                         </div>
                                     </div> */}
-                                    <div className="description">
+                                    {/* <div className="description">
                                         <p>
                                             {
                                                 productData?.product_description ||
                                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."}
                                         </p>
-                                    </div>
-                                    <div className="variations">
+                                    </div> */}
+                                    {/* <div className="variations">
                                         <table cellSpacing="0">
                                             <tbody>
                                                 <tr>
@@ -117,9 +128,9 @@ export default function page({ productId }) {
                                                 </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div> */}
                                     <div className="buttons">
-                                        <div className="add-to-cart-wrap">
+                                        {/* <div className="add-to-cart-wrap">
                                             <div className="quantity">
                                                 <button type="button" className="plus">
                                                     +
@@ -147,39 +158,83 @@ export default function page({ productId }) {
                                                     Add to cart
                                                 </a>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="btn-quick-buy" data-title="Wishlist">
-                                            <button className="product-btn">Buy It Now</button>
+                                            <button className="product-btn">Enquiry</button>
                                         </div>
-                                        <div className="btn-wishlist" data-title="Wishlist">
+                                        {/* <div className="btn-wishlist" data-title="Wishlist">
                                             <button className="product-btn">Add to wishlist</button>
-                                        </div>
-                                        <div className="btn-compare" data-title="Compare">
+                                        </div> */}
+                                        {/* <div className="btn-compare" data-title="Compare">
                                             <button className="product-btn">Compare</button>
-                                        </div>
+                                        </div> */}
                                     </div>
+
+
+                                    <div className="other-dets">
+                                        <ul className="product-attributes-list">
+                                            {
+                                                productData?.attributes?.map((attr) => (
+                                                    attr?.attribute?.title !== "Price Range" && (
+                                                        <li className="attribute-item" key={attr.id}>
+                                                            <strong className="attribute-label">{attr?.attribute?.title}: </strong>
+                                                            <span className="attribute-values">
+                                                                {attr?.values?.map((value, index) => (
+                                                                    <span key={value.id}>
+                                                                        {value?.attribute_value?.name}
+                                                                        {index < attr?.values?.length - 1 ? ", " : ""}
+                                                                    </span>
+                                                                ))}
+                                                            </span>
+                                                        </li>
+                                                    )
+                                                ))
+                                            }
+                                        </ul>
+
+                                    </div>
+                                    {/* <table className="product-attributes">
+                                        <tbody>
+                                            {
+                                                productData?.attributes?.map((attr) => (
+                                                    attr?.attribute?.title !== "Price Range" && (
+                                                        <tr className="attribute-item" key={attr.id}>
+                                                            <th className="attribute-label">{attr?.attribute?.title}</th>
+                                                            {attr?.values?.map((value) => (
+                                                                <td className="attribute-value" key={value.id}>
+                                                                    {value?.attribute_value?.name}
+                                                                </td>
+                                                            ))}
+                                                        </tr>
+                                                    )
+                                                ))
+                                            }
+                                        </tbody>
+                                    </table> */}
+
+
                                     <div className="product-meta">
                                         <span className="sku-wrapper">
-                                            SKU: <span className="sku">D2300-3-2-2</span>
+                                            SKU: <span className="sku">{productData?.hsn_code || "SBJ-453"}</span>
                                         </span>
                                         <span className="posted-in">
                                             Category:
-                                            <a href="shop-grid-left.html" rel="tag">
-                                                Bracelets
+                                            <a href={`/category/${productData?.category?.slug}`} rel="tag">
+                                                {productData?.category?.title}
                                             </a>
                                         </span>
                                         <span className="tagged-as">
                                             Tags:
-                                            <a href="shop-grid-left.html" rel="tag">
+                                            <a rel="tag">
                                                 Hot
                                             </a>
                                             ,
-                                            <a href="shop-grid-left.html" rel="tag">
+                                            <a rel="tag">
                                                 Trend
                                             </a>
                                         </span>
                                     </div>
-                                    <div className="social-share">
+                                    {/* <div className="social-share">
                                         <a
                                             href="#"
                                             title="Facebook"
@@ -194,8 +249,10 @@ export default function page({ productId }) {
                                         <a href="#" title="Pinterest" className="share-pinterest">
                                             <i className="fa fa-pinterest"></i>Pinterest
                                         </a>
-                                    </div>
+                                    </div> */}
+
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -263,12 +320,18 @@ export default function page({ productId }) {
                                     >
                                         <table className="product-attributes">
                                             <tbody>
-                                                <tr className="attribute-item">
-                                                    <th className="attribute-label">Color</th>
-                                                    <td className="attribute-value">
-                                                        Antique, Chestnut, Grullo
-                                                    </td>
-                                                </tr>
+                                                {
+                                                    productData?.attributes?.map((attr) => (
+                                                        <tr className="attribute-item" key={attr.id}>
+                                                            <th className="attribute-label">{attr?.attribute?.title}</th>
+                                                            {attr?.values?.map((value) => (
+                                                                <td className="attribute-value" key={value.id}>
+                                                                    {value?.attribute_value?.name}
+                                                                </td>
+                                                            ))}
+                                                        </tr>
+                                                    ))
+                                                }
                                             </tbody>
                                         </table>
                                     </div>

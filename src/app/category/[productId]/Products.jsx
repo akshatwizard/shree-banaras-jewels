@@ -136,6 +136,7 @@ export default function Products({ productId }) {
         event.preventDefault();
         setShowFilterMenu(true);
     }
+    console.log(productData[3]?.product_images[0]);
 
     return (
         <section className="section-padding" style={{ margin: "50px 0" }}>
@@ -190,10 +191,14 @@ export default function Products({ productId }) {
                                     <div key={product.title} className="col-lg-3 col-md-4 col-12 col-sm-6" style={{ marginBottom: "30px" }}>
                                         <div className="product-cart-wrap mb-30">
                                             <div className="product-img-action-wrap">
-                                                <div className="product-img product-img-zoom">
+                                                <div className="product-img product-img-zoom" style={{ backgroundColor: "#f4f4f4" }}>
                                                     <a href={`${productId}/${product.slug}`}>
-                                                        <img className="default-img" src="/media/product/1-2.jpg" alt="" />
-                                                        <img className="hover-img" src="/media/product/1-2.jpg" alt="" />
+                                                        <img className="default-img"
+                                                            src={`${product?.product_images[0]?.full_image_url || '/media/logo.png'}`}
+                                                            alt={product.title} />
+                                                        <img className="hover-img"
+                                                            src={`${product?.product_images[1]?.full_image_url || '/media/logo.png'}`}
+                                                            alt={product.title} />
                                                     </a>
                                                 </div>
                                             </div>

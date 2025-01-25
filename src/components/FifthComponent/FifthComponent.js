@@ -16,21 +16,23 @@ export default function FifthComponent() {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    swipeToSlide: true,
     responsive: [
+      { breakpoint: 1440, settings: { slidesToShow: 4, slidesToScroll: 1 } },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -52,9 +54,7 @@ export default function FifthComponent() {
             <div className="block-title">
               <h2>Trending Products</h2>
             </div>
-            {
-              loading && <Loader/>
-            }
+            {loading && <Loader />}
             <div className="block-content">
               <div className="content-product-list slick-wrap">
                 <div className="slick-sliders products-list grid">
