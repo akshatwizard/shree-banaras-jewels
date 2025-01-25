@@ -1,12 +1,13 @@
 'use client'
 import Carousel from "@/components/ImageZoom/Carousel";
 import Fancybox from "@/components/ImageZoom/Fancybox";
+import OverlayLoader from "@/components/Skeleton/OverlayLoader";
 import useFetch from "@/hooks/FetchData";
 import React, { useEffect, useState } from "react";
 
 export default function page({ productId }) {
     const [productData, setProductData] = useState([]);
-    const { data, error, loading } = useFetch(`http://gdsons.co.in/demo/shreebanaras/api/products/${productId}`);
+    const { data, error, loading } = useFetch(`https://gdsons.co.in/demo/shreebanaras/api/products/${productId}`);
 
     useEffect(() => {
         if (data?.product_details) {
@@ -20,6 +21,7 @@ export default function page({ productId }) {
                 <div className="product-top-info" style={{ marginTop: "80px" }}>
                     <div className="section-padding">
                         <div className="section-container p-l-r">
+                            {loading && <OverlayLoader/>}
                             <div className="row">
                                 <div className="product-images col-lg-5 col-md-12 col-12">
                                     <div className="row">
