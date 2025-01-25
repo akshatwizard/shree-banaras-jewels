@@ -141,7 +141,7 @@
 }
 
 /* From Uiverse.io by barisdogansutcu */ 
-svg {
+.overlay-wraper svg {
   width: 5rem;
   transform-origin: center;
   animation: rotate4 2s linear infinite;
