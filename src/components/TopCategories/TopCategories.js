@@ -21,8 +21,8 @@ export default function TopCategories() {
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
-    arrows: true, // Ensure arrows are enabled
-
+    arrows: false, // Ensure arrows are enabled
+    swipeToSlide: true,
     responsive: [
       { breakpoint: 1440, settings: { slidesToShow: 5 } },
       { breakpoint: 1024, settings: { slidesToShow: 3 } },

@@ -36057,3 +36057,31 @@ body[class~="home"][class~="title-6"]
 .product-title a{ 
   display: inline-block;
 }
+
+.product-cart-wrap:hover .default-img{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.other-dets{
+  position: relative;
+  width:100%;
+  margin-top: 20px;
+
+  ul{
+    margin: 0;
+    padding: 0;
+
+    li>strong{
+      font-size: 16px;
+      line-height: 1;
+      color: #323232;
+    }
+
+    li>span{
+      font-size: 15px;
+      line-height: 1;
+    }
+  }
+}
