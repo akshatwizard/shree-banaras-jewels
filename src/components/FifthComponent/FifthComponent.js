@@ -66,7 +66,7 @@ export default function FifthComponent() {
                       >
                         <div className="items">
                           <div className="products-entry clearfix product-wapper">
-                            <div className="products-thumb">
+                            <div className="products-thumb" style={{ backgroundColor: "#f4f4f4", borderRadius:"10px" }}>
                               {/* <div className="product-lable">
                                 <div className="hot">Hot</div>
                               </div> */}
