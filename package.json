@@ -12,7 +12,7 @@
     "@fancyapps/ui": "^5.0.36",
     "axios": "^1.7.9",
     "jquery": "^3.7.1",
-    "next": "15.0.3",
+    "next": "15.0.7",
     "next-nprogress-bar": "^2.4.3",
     "nextjs-toploader": "^3.7.15",
     "nprogress": "^0.2.0",
